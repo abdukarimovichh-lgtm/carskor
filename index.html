@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars Korea - Автомобили из Кореи, Японии и Китая под ключ</title>
+    <meta name="description" content="Подбор и доставка автомобилей из Южной Кореи, Японии и Китая под ключ. Прозрачный расчет, проверка перед покупкой, доставка до вашего города.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-circle">
+                        <svg class="logo-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <filter id="glow">
+                                    <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                                    <feMerge>
+                                        <feMergeNode in="coloredBlur"/>
+                                        <feMergeNode in="SourceGraphic"/>
+                                    </feMerge>
+                                </filter>
+                            </defs>
+                            <!-- Car silhouette -->
+                            <path d="M 40 100 Q 45 80 60 75 L 130 75 Q 145 80 150 100 L 155 120 Q 155 130 145 135 L 55 135 Q 45 130 45 120 Z" stroke="#ffffff" stroke-width="2" fill="none" filter="url(#glow)"/>
+                            <!-- Wheels -->
+                            <circle cx="70" cy="140" r="8" fill="#ffffff" filter="url(#glow)"/>
+                            <circle cx="130" cy="140" r="8" fill="#ffffff" filter="url(#glow)"/>
+                            <!-- Korean flag colors in circle -->
+                            <circle cx="85" cy="105" r="6" fill="#c60c30" filter="url(#glow)"/>
+                            <circle cx="85" cy="105" r="4" fill="#003478" filter="url(#glow)"/>
+                        </svg>
+                    </div>
+                    <div class="brand-name">
+                        <h1>Cars Korea</h1>
+                    </div>
+                </div>
+                <nav class="nav-menu">
+                    <a href="#directions">Авто из Кореи</a>
+                    <a href="#directions">Япония</a>
+                    <a href="#directions">Китай</a>
+                    <a href="#how-it-works">Как заказать</a>
+                    <a href="#contacts">Контакты</a>
+                </nav>
+                <button class="btn btn-primary" onclick="openWhatsApp('form')">Получить расчёт</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Автомобили из Южной Кореи под ключ с доставкой по России</h2>
+                <p class="hero-subtitle">Подберём, проверим, рассчитаем и доставим автомобиль под ваш бюджет — без скрытых платежей и покупки вслепую.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="openWhatsApp('form')">Получить расчёт в WhatsApp</button>
+                    <button class="btn btn-secondary" onclick="openTelegram()">Написать в Telegram</button>
+                </div>
+                <div class="trust-line">
+                    <span>✓ Проверка перед покупкой</span>
+                    <span>✓ Прозрачный расчёт</span>
+                    <span>✓ Доставка до вашего города</span>
+                    <span>✓ Сопровождение до получения</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ADVANTAGES SECTION -->
+    <section class="advantages">
+        <div class="container">
+            <h2 class="section-title">Почему выбирают Cars Korea</h2>
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-icon">📋</div>
+                    <h3>Подбор под бюджет</h3>
+                    <p>Подбираем автомобиль под ваши задачи, бюджет, город и предпочтения.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">✓</div>
+                    <h3>Проверка перед покупкой</h3>
+                    <p>Проверяем состояние, историю, документы и реальные параметры автомобиля.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">💰</div>
+                    <h3>Прозрачный расчёт</h3>
+                    <p>Показываем итоговую стоимость до покупки, без скрытых платежей.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">🚚</div>
+                    <h3>Доставка под ключ</h3>
+                    <p>Сопровождаем процесс до получения автомобиля в вашем городе.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIRECTIONS SECTION -->
+    <section class="directions" id="directions">
+        <div class="container">
+            <h2 class="section-title">Авто под заказ из Кореи, Японии и Китая</h2>
+            <div class="directions-grid">
+                <div class="direction-card">
+                    <h3>Южная Корея</h3>
+                    <div class="brands">Kia, Hyundai, Chevrolet, BMW, Mercedes-Benz</div>
+                    <p>Подбор автомобилей из Южной Кореи под ключ: от городских авто до бизнес-класса и кроссоверов.</p>
+                    <button class="btn btn-outline" onclick="openWhatsApp('korea')">Рассчитать авто из Кореи</button>
+                </div>
+                <div class="direction-card">
+                    <h3>Япония</h3>
+                    <div class="brands">Toyota, Honda, Nissan, Mazda, Lexus</div>
+                    <p>Подбор автомобилей из Японии с учётом бюджета, состояния, года и города доставки.</p>
+                    <button class="btn btn-outline" onclick="openWhatsApp('japan')">Рассчитать авто из Японии</button>
+                </div>
+                <div class="direction-card">
+                    <h3>Китай</h3>
+                    <div class="brands">Changan, Geely, Zeekr, Li Auto, Exeed</div>
+                    <p>Подбор современных автомобилей из Китая под ваш бюджет и задачи.</p>
+                    <button class="btn btn-outline" onclick="openWhatsApp('china')">Рассчитать авто из Китая</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- POPULAR CARS SECTION -->
+    <section class="popular-cars">
+        <div class="container">
+            <h2 class="section-title">Популярные автомобили</h2>
+            <div class="cars-grid">
+                <div class="car-card">
+                    <div class="car-visual">🚗</div>
+                    <h3>Kia K5</h3>
+                    <div class="car-meta">Южная Корея • Седан</div>
+                    <p>Современный седан премиум-класса с расчётом под ваш бюджет.</p>
+                    <button class="btn btn-small" onclick="openWhatsApp('kia-k5')">Рассчитать</button>
+                </div>
+                <div class="car-card">
+                    <div class="car-visual">🚗</div>
+                    <h3>Hyundai Grandeur</h3>
+                    <div class="car-meta">Южная Корея • Седан</div>
+                    <p>Бизнес-класс с актуальными вариантами под ваш запрос.</p>
+                    <button class="btn btn-small" onclick="openWhatsApp('hyundai-grandeur')">Рассчитать</button>
+                </div>
+                <div class="car-card">
+                    <div class="car-visual">🚙</div>
+                    <h3>Kia Sportage</h3>
+                    <div class="car-meta">Южная Корея • Кроссовер</div>
+                    <p>Популярный кроссовер для города и дальних поездок.</p>
+                    <button class="btn btn-small" onclick="openWhatsApp('kia-sportage')">Рассчитать</button>
+                </div>
+                <div class="car-card">
+                    <div class="car-visual">🚙</div>
+                    <h3>Hyundai Tucson</h3>
+                    <div class="car-meta">Южная Корея • Кроссовер</div>
+                    <p>Надёжный кроссовер с современным функционалом.</p>
+                    <button class="btn btn-small" onclick="openWhatsApp('hyundai-tucson')">Рассчитать</button>
+                </div>
+                <div class="car-card">
+                    <div class="car-visual">🚙</div>
+                    <h3>Toyota Camry</h3>
+                    <div class="car-meta">Япония • Седан</div>
+                    <p>Легендарный японский седан с надёжной репутацией.</p>
+                    <button class="btn btn-small" onclick="openWhatsApp('toyota-camry')">Рассчитать</button>
+                </div>
+                <div class="car-card">
+                    <div class="car-visual">🚙</div>
+                    <h3>Honda CR-V</h3>
+                    <div class="car-meta">Япония • Кроссовер</div>
+                    <p>Практичный кроссовер с хорошей вместимостью.</p>
+                    <button class="btn btn-small" onclick="openWhatsApp('honda-crv')">Рассчитать</button>
+                </div>
+                <div class="car-card">
+                    <div class="car-visual">🚗</div>
+                    <h3>BMW 3 Series</h3>
+                    <div class="car-meta">Южная Корея • Седан премиум</div>
+                    <p>Премиальный седан для тех, кто ценит комфорт.</p>
+                    <button class="btn btn-small" onclick="openWhatsApp('bmw-3')">Рассчитать</button>
+                </div>
+                <div class="car-card">
+                    <div class="car-visual">🚗</div>
+                    <h3>Mercedes-Benz E-Class</h3>
+                    <div class="car-meta">Южная Корея • Седан премиум</div>
+                    <p>Легендарный премиум-седан с высочайшим уровнем комфорта.</p>
+                    <button class="btn btn-small" onclick="openWhatsApp('mercedes-e')">Рассчитать</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Как проходит заказ</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Заявка</h3>
+                    <p>Клиент оставляет запрос, бюджет, город и желаемый автомобиль.</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Подбор</h3>
+                    <p>Подбираем актуальные варианты из Кореи, Японии или Китая.</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Проверка</h3>
+                    <p>Проверяем состояние, историю, документы и параметры авто.</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Расчёт</h3>
+                    <p>Показываем итоговую стоимость под ключ до вашего города.</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <h3>Доставка</h3>
+                    <p>Сопровождаем автомобиль до получения клиентом.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING BREAKDOWN -->
+    <section class="pricing-breakdown">
+        <div class="container">
+            <h2 class="section-title">Из чего складывается итоговая стоимость</h2>
+            <div class="pricing-content">
+                <div class="pricing-list">
+                    <div class="pricing-item">Стоимость автомобиля</div>
+                    <div class="pricing-item">Расходы на покупку</div>
+                    <div class="pricing-item">Доставка до портов</div>
+                    <div class="pricing-item">Оформление документов</div>
+                    <div class="pricing-item">Утильсбор и сборы</div>
+                    <div class="pricing-item">Доставка до города клиента</div>
+                    <div class="pricing-item">Сопровождение и консультации</div>
+                </div>
+                <div class="pricing-note">
+                    <p><strong>Итоговая цена</strong> зависит от страны, модели, года, пробега, состояния автомобиля и города доставки. Перед покупкой мы делаем индивидуальный расчёт.</p>
+                    <button class="btn btn-primary" onclick="openWhatsApp('pricing')">Получить расчёт под мой бюджет</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORM SECTION -->
+    <section class="form-section">
+        <div class="container">
+            <h2 class="section-title">Получите расчёт автомобиля под ваш бюджет</h2>
+            <p class="form-subtitle">Оставьте данные — мы рассчитаем актуальные варианты под ваш бюджет, город доставки и желаемую модель.</p>
+            <form class="inquiry-form" id="inquiryForm">
+                <div class="form-group">
+                    <input type="text" placeholder="Ваше имя" name="name" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Телефон" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Желаемый автомобиль" name="car" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Бюджет (руб.)" name="budget" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Город доставки" name="city" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Комментарий (опционально)" name="comment" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-large">Получить расчёт</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Часто задаваемые вопросы</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">Сколько занимает доставка?</div>
+                    <div class="faq-answer">Срок зависит от страны, автомобиля, маршрута и города получения. Точный срок уточняется при расчёте.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Можно ли рассчитать авто под мой бюджет?</div>
+                    <div class="faq-answer">Да. Вы оставляете бюджет и желаемую модель, мы подбираем актуальные варианты.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Можно ли заказать авто из Кореи?</div>
+                    <div class="faq-answer">Да, Cars Korea занимается подбором и доставкой автомобилей из Южной Кореи под ключ.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Можно ли заказать авто из Японии или Китая?</div>
+                    <div class="faq-answer">Да, также возможен подбор автомобилей из Японии и Китая.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">От чего зависит итоговая цена?</div>
+                    <div class="faq-answer">От стоимости автомобиля, года, пробега, состояния, доставки, оформления, документов, утильсбора и города получения.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Как оставить заявку?</div>
+                    <div class="faq-answer">Через WhatsApp, Telegram, Instagram или форму на сайте.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTS SECTION -->
+    <section class="contacts" id="contacts">
+        <div class="container">
+            <div class="contacts-content">
+                <div class="contacts-left">
+                    <h2>Cars Korea</h2>
+                    <p>Автомобили из Южной Кореи, Японии и Китая под ключ</p>
+                    <p class="contacts-text">Оставьте заявку — рассчитаем актуальные варианты под ваш бюджет и город доставки.</p>
+                    <div class="contacts-buttons">
+                        <a href="https://wa.me/79510150505?text=Здравствуйте!%20Хочу%20рассчитать%20автомобиль%20под%20ключ." target="_blank" class="btn btn-social">WhatsApp</a>
+                        <a href="https://t.me/+79510150505" target="_blank" class="btn btn-social">Telegram</a>
+                        <a href="https://www.instagram.com/cars_koreaa" target="_blank" class="btn btn-social">Instagram</a>
+                        <a href="https://t.me/koreya_avto_05" target="_blank" class="btn btn-social">Telegram-канал</a>
+                    </div>
+                    <div class="phone-info">
+                        <strong>Телефон:</strong> <a href="tel:+79510150505">+7 951 015-05-05</a>
+                    </div>
+                </div>
+                <div class="contacts-right">
+                    <div class="logo-circle-large">
+                        <svg class="logo-svg-large" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <filter id="glow-large">
+                                    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                                    <feMerge>
+                                        <feMergeNode in="coloredBlur"/>
+                                        <feMergeNode in="SourceGraphic"/>
+                                    </feMerge>
+                                </filter>
+                            </defs>
+                            <path d="M 40 100 Q 45 80 60 75 L 130 75 Q 145 80 150 100 L 155 120 Q 155 130 145 135 L 55 135 Q 45 130 45 120 Z" stroke="#ffffff" stroke-width="2" fill="none" filter="url(#glow-large)"/>
+                            <circle cx="70" cy="140" r="8" fill="#ffffff" filter="url(#glow-large)"/>
+                            <circle cx="130" cy="140" r="8" fill="#ffffff" filter="url(#glow-large)"/>
+                            <circle cx="85" cy="105" r="6" fill="#c60c30" filter="url(#glow-large)"/>
+                            <circle cx="85" cy="105" r="4" fill="#003478" filter="url(#glow-large)"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="legal-block">
+                <p>ООО «КАРС КОР»</p>
+                <p>Телефон: <a href="tel:+79510150505">+7 951 015-05-05</a></p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
